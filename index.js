@@ -1,5 +1,6 @@
 import express, { json } from "express";
 import cors from "cors";
+import chalk from "chalk";
 
 const app = express();
 
@@ -40,5 +41,5 @@ app.get("/tweets", (req, res) => {
 });
 
 app.listen(5000, () => {
-  console.log("estou no ar");
+  console.log(chalk.blue("Estou no ar"));
 });
