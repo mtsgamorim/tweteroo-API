@@ -23,7 +23,7 @@ app.post("/tweets", (req, res) => {
   res.send("OK");
 });
 
-app.get("/tweets", (req, res) => {
+app.get("/tweets", (_, res) => {
   const lastTenTweets = [];
   if (tweets.length > 0) {
     for (let i = tweets.length - 1; i > tweets.length - 11 && i >= 0; i--) {
